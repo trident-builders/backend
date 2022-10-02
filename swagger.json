@@ -1,0 +1,128 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Poorvika"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/inventory": {
+            "get": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/inventory/addInventory": {
+            "post": {
+                "tags": [
+                    "Inventory"
+                ],
+                "parameters": [
+                    {
+                        "name": "Add Inventory",
+                        "in": "body"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "The user's name.",
+                                        "example": "Leanne Graham"
+                                    },
+                                    "rootNodeName": {
+                                        "type": "object",
+                                        "description": "Root node class name for item"
+                                    }
+                                }
+                            },
+                            "produces": [
+                                "application/json"
+                            ],
+                            "consumes": [
+                                "application/json"
+                            ]
+                        }
+                    }
+                },
+                "summary": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/warehouse/1": {
+            "get": {
+                "tags": [
+                    "warehouse"
+                ],
+                "summary": "For Active Warehouse",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/warehouse": {
+            "post": {
+                "tags": [
+                    "warehouse"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/warehouse": {
+            "put": {
+                "tags": [
+                    "warehouse"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/warehouse": {
+            "delete": {
+                "tags": [
+                    "warehouse"
+                ],
+                "summary": "For Active Warehouse",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
